@@ -13,8 +13,8 @@ cores = []
 for _, attr in G.nodes(data=True):
     tipo = attr.get("tipo")
     cores.append({
-        "base": "black",
-        "expansao": "blue",
+        "base": "cyan",
+        "expansao": "lightblue",
         "mundo": "green",
         "mecanica": "orange",
         "sim": "purple",
