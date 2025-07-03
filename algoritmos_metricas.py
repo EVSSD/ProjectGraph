@@ -82,9 +82,6 @@ def main():
     clustering = nx.average_clustering(G)
     print(f"Coeficiente de Clustering médio: {clustering:.4f}")
 
-    assort = nx.degree_assortativity_coefficient(G)
-    print(f"Coeficiente de Assortatividade: {assort:.4f}")
-
     #Cálculos internos
     print("\nExpansões com mais itens no CAS:")
     expansoes = [n for n, d in G.nodes(data=True) if d.get("tipo") == "expansao"]
@@ -102,16 +99,16 @@ def main():
     print(f"Total de Sims ocultos: {len(sims_ocultos)}")
     print("Nomes:", sims_ocultos)
 
-    #menor caminho entre "Caleb Vatore" e "Feitiçaria"
-    caminho = nx.dijkstra_path(G, source="Caleb Vatore", target="Greg")
-    print("Menor caminho entre Caleb Vatore e Greg:", caminho)
+
+    caminho = nx.dijkstra_path(G, source="Caleb Vatore", target="Pé na Cova")
+    print("Menor caminho entre Caleb Vatore e Pé na Cova:", caminho)
 
     
     
 
 
     # Lista de adjacência
-    #mostrar_lista_adjacencia(G)
+    mostrar_lista_adjacencia(G)
 
     # Comunidades por cor
     pos = nx.kamada_kawai_layout(G)
@@ -134,7 +131,7 @@ def main():
     desenhar_grafo_destaque(
         G,
         pos,
-        "Menor Caminho entre Caleb Vatore e Greg (Dijkstra)",
+        "Menor Caminho entre Caleb Vatore e a Expansão Pé na Cova (Dijkstra)",
         node_color=node_colors,
         edge_color=edge_colors,
         node_size=3500
