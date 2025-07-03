@@ -100,8 +100,8 @@ def main():
     print("Nomes:", sims_ocultos)
 
 
-    caminho = nx.dijkstra_path(G, source="Caleb Vatore", target="Pé na Cova")
-    print("Menor caminho entre Caleb Vatore e Pé na Cova:", caminho)
+    caminho = nx.dijkstra_path(G, source="Caleb Vatore", target="Vida Oceânica")
+    print("Menor caminho entre Caleb Vatore e Vida Oceânica:", caminho)
 
     
     
@@ -131,7 +131,7 @@ def main():
     desenhar_grafo_destaque(
         G,
         pos,
-        "Menor Caminho entre Caleb Vatore e a Expansão Pé na Cova (Dijkstra)",
+        "Menor Caminho entre Caleb Vatore e a Expansão Vida Oceânica (Dijkstra)",
         node_color=node_colors,
         edge_color=edge_colors,
         node_size=3500
